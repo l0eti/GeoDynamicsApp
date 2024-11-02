@@ -1,0 +1,151 @@
+﻿<Window x:Class="GeoDynamicsApp.BuyBasketPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeoDynamicsApp"
+        mc:Ignorable="d"
+        Title="Корзина" Height="600" Width="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="459*"/>
+        </Grid.RowDefinitions>
+        <Border Background="LightGray" VerticalAlignment="Top" Padding="15">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" FlowDirection="RightToLeft" >
+                <Button x:Name="regB" Background="White" Content="Регистрация" MinWidth="20" MaxWidth="100" MinHeight="10" MaxHeight="20" Margin="10 0 5 0" Click="regB_Click"/>
+                <Button x:Name="logB" Background="White" Content="Войти" MinWidth="50" MaxWidth="50" MinHeight="20" MaxHeight="20" Margin="0 0 30 0" Click="logB_Click"/>
+                <Button x:Name="marketB" Background="White" Content="Маркет" MinWidth="50" MaxWidth="50" MinHeight="20" MaxHeight="20" Margin="0 0 10 0" Click="marketB_Click"/>
+                <Button x:Name="forumB" Background="White" Content="Сообщества" MinWidth="50" MaxWidth="80" MinHeight="20" MaxHeight="20" Margin="0 0 10 0" Click="forumB_Click"/>
+                <Button x:Name="statB" Background="White" Content="Статьи" MinWidth="50" MaxWidth="60" MinHeight="20" MaxHeight="20" Margin="0 0 10 0" Click="statB_Click"/>
+                <Button x:Name="newsB" Background="White" Content="Новости" MinWidth="50" MaxWidth="60" MinHeight="20" MaxHeight="20" Click="newsB_Click"/>
+            </StackPanel>
+        </Border>
+
+        <Border Background="#4388cd" Margin="0,50,0,0" VerticalAlignment="Top" Padding="20">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Medium"><Run Language="ru-ru" Text="Корзина"/></TextBlock>
+        </Border>
+
+        <Grid Grid.Row="1" Margin= "30,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Column="3" Grid.RowSpan="2">
+
+            </ScrollViewer>
+
+            <Border Height="200" VerticalAlignment="Top" Margin="10 0 10 10" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Grid.Column="0" Grid.Row="0">
+                <Grid x:Name="grid_1Supply">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="26*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Image HorizontalAlignment="Center" Margin="0,5,0,5" Width="120" Source="/mug.jpg" >
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="/mug.jpg"/>
+                        </Image.OpacityMask>
+                    </Image>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Кружка" Width="100" TextAlignment="Center" Margin="0 10 0 20" FontSize="18"/>
+                        <TextBlock Text="599р" Width="100" TextAlignment="Center" FontSize="15"/>
+                        <Button x:Name="buyBasketB" Content="Удалить"  Width="75" Margin="0 90 0 0" FontSize="12"  Background="#FFE20000" Foreground="White" FontWeight="Medium" BorderBrush="#FF2A375F" Click="buyBasketB_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Height="200" VerticalAlignment="Top" Margin="10 0 10 10" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Grid.Column="0" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="26*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Image HorizontalAlignment="Center" Margin="0,5,0,5" Width="120" Source="/no-image-icon-6.png" >
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="/no-image-icon-6.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Sample Text" Width="100" TextAlignment="Center" Margin="0 10 0 20" FontSize="18"/>
+                        <TextBlock Text="XXXр" Width="100" TextAlignment="Center" FontSize="15"/>
+                        <Button x:Name="buyBasketB_1" Content="Удалить"  Width="75" Margin="0 90 0 0" FontSize="12"  Background="#FFE20000" Foreground="White" FontWeight="Medium" BorderBrush="#FF2A375F" Click="buyBasketB_1_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Height="200" VerticalAlignment="Top" Margin="10 0 10 10" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Grid.Column="1" Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="26*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Image HorizontalAlignment="Center" Margin="0,5,0,5" Width="120" Source="/no-image-icon-6.png" >
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="/no-image-icon-6.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Sample Text" Width="100" TextAlignment="Center" Margin="0 10 0 20" FontSize="18"/>
+                        <TextBlock Width="100" TextAlignment="Center" FontSize="15"><Run Text="XXX"/><Run Text="р"/></TextBlock>
+                        <Button x:Name="buyBasketB_2" Content="Удалить"  Width="75" Margin="0 90 0 0" FontSize="12"  Background="#FFE20000" Foreground="White" FontWeight="Medium" BorderBrush="#FF2A375F" Click="buyBasketB_2_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Height="200" VerticalAlignment="Top" Margin="10 0 10 10" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Grid.Column="1" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="26*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Image HorizontalAlignment="Center" Margin="0,5,0,5" Width="120" Source="/no-image-icon-6.png" >
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="/no-image-icon-6.png"/>
+                        </Image.OpacityMask>
+                    </Image>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Width="100" TextAlignment="Center" Margin="0 10 0 20" FontSize="18" Text="Sample Text"/>
+                        <TextBlock Width="100" TextAlignment="Center" FontSize="15"><Run Text="XXX"/><Run Text="р"/></TextBlock>
+                        <Button x:Name="buyBasketB_3" Content="Удалить"  Width="75" Margin="0 90 0 0" FontSize="12"  Background="#FFE20000" Foreground="White" FontWeight="Medium" BorderBrush="#FF2A375F" Click="buyBasketB_3_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Height="425" Grid.RowSpan="2" VerticalAlignment="Top" Margin="10,0,10,0" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Grid.Column="2" Grid.Row="0" >
+                <StackPanel >
+                    <TextBlock Text="Итого к оплате:" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock x:Name="textBlock_1Supply" Text="1x Кружка - 599р" FontSize="16" Margin="10 50 10 0"/>
+                    <Border x:Name="zakazB" Background="#FF70E846" CornerRadius="20" Width="200" Height="50" Margin="0 250 0 0" MouseDown="zakazB_MouseDown" >
+                        <TextBlock  Text="Оформить заказ" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17" FontWeight="Bold"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+
+    </Grid>
+</Window>

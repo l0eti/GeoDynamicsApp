@@ -1,0 +1,30 @@
+﻿<Window x:Class="GeoDynamicsApp.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeoDynamicsApp"
+        mc:Ignorable="d"
+        Title="Войти как читатель" Height="600" Width="800" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Вход" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" />
+
+                <Grid Margin="0 0 0 20" >
+                </Grid>
+
+                <Label Content="Логин" FontSize="14"/>
+                <TextBox FontSize="15"/>
+                <Label Content="Пароль" FontSize="14" />
+                <PasswordBox FontSize="15"/>
+                <Button x:Name="logInB" Content="Войти" Margin="0 10" MaxWidth="300" FontSize="16" Click="logInB_Click"/>
+                <Button x:Name="nazadB" Content="Назад" MaxWidth="100" Click="nazadB_Click"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

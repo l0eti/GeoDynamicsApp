@@ -39,24 +39,23 @@ namespace GeoDynamicsApp
         private void OnJoin(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            button.Content = "Вы вступили";
-            button.IsEnabled = false;
+
+            if (button.Content == "Перейти")
+            {
+                DiscussionPage discussionPage = new DiscussionPage();
+                discussionPage.Show();
+                this.Close();
+                return;
+            }
+
+            button.Content = "Перейти";
 
             MessageBox.Show("Вы вступили в сообщество!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
-        private void TextBox_DragEnter(object sender, DragEventArgs e)
-        {
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("В настоящее время данная функция находится в разработке!", "В разработке", MessageBoxButton.OK, MessageBoxImage.Warning);
-        }
-
-        private void TextBox_TouchEnter(object sender, TouchEventArgs e)
-        {
-
         }
                 
         private void searchBox_TextChanged(object sender, TextChangedEventArgs e)

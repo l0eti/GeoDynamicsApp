@@ -111,8 +111,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Article.cs" />
     <Compile Include="ArticlesPage.xaml.cs">
       <DependentUpon>ArticlesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleWindow.xaml.cs">
+      <DependentUpon>ArticleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="BuyBasketPage.xaml.cs">
       <DependentUpon>BuyBasketPage.xaml</DependentUpon>
@@ -142,6 +146,10 @@
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="ArticlesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ArticleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

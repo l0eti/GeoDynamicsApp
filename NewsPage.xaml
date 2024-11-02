@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeoDynamicsApp"
         mc:Ignorable="d"
+        Left="100" Top="50"
         Title="Новости" Height="600" Width="800" ResizeMode="NoResize" WindowStyle="ToolWindow">
     <Grid Background="White">
         <Grid.RowDefinitions>
@@ -23,7 +24,7 @@
         </Border>
 
         <Border Background="#4388cd" Margin="0,50,0,0" VerticalAlignment="Top" Padding="20">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Medium"><Run Language="ru-ru" Text="Новости"/></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Medium" Foreground="White"><Run Language="ru-ru" Text="Новости"/></TextBlock>
         </Border>
 
         <TextBlock Grid.Row="1" Margin="202,157,176,177" FontSize="16" TextWrapping="Wrap" Text="ООО «Геодинамика-М» продолжает комплекс регламентных работ по ежегодному обновлению геопространственной информации для аэродрома «Пулково»" Foreground="#FFD40000"/>
@@ -38,7 +39,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="pod1" Content="Подробнее" FontWeight="Bold" HorizontalAlignment="Left" Margin="202,109,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="125" Background="#FFF38D37" Foreground="White" Click="pod1_Click"/>
+        <Button x:Name="pod1" Content="Подробнее" FontWeight="Bold" HorizontalAlignment="Left" Margin="202,109,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="125" Background="#FFF38D37" Foreground="White" Click="pod1_Click" Tag="1"/>
         <Image HorizontalAlignment="Left" Height="125" Margin="30,156,0,0" Grid.Row="1" VerticalAlignment="Top" Width="167" Source="/new2.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -49,7 +50,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="pod1_Копировать" Content="Подробнее" FontWeight="Bold" HorizontalAlignment="Left" Margin="202,251,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="125" Background="#FFF38D37" Foreground="White" Click="pod1_Click"/>
+        <Button x:Name="pod1_Копировать" Content="Подробнее" FontWeight="Bold" HorizontalAlignment="Left" Margin="202,251,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="125" Background="#FFF38D37" Foreground="White" Click="pod1_Click" Tag="2"/>
         <TextBlock Grid.Row="1" Margin="202,300,176,34" FontSize="16" TextWrapping="Wrap" Text="ООО «Геодинамика–М» заключило договор с АО «Аэропорт Победилово»" Foreground="#FFD40000"/>
         <Image HorizontalAlignment="Left" Height="125" Margin="30,299,0,0" Grid.Row="1" VerticalAlignment="Top" Width="167" Source="/new3.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
@@ -61,7 +62,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="pod1_Копировать1" Content="Подробнее" FontWeight="Bold" HorizontalAlignment="Left" Margin="202,393,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="125" Background="#FFF38D37" Foreground="White" Click="pod1_Click"/>
+        <Button x:Name="pod1_Копировать1" Content="Подробнее" FontWeight="Bold" HorizontalAlignment="Left" Margin="202,393,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="125" Background="#FFF38D37" Foreground="White" Click="pod1_Click" Tag="3"/>
         <TextBlock HorizontalAlignment="Left"  Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="16" Text="2 Октября, 2023" FontWeight="Black" Margin="629,14,0,0" Width="161"/>
         <TextBlock HorizontalAlignment="Left" Margin="629,157,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="16" Text="2 Октября, 2023" FontWeight="Black" Width="161"/>
         <TextBlock HorizontalAlignment="Left" Margin="629,300,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="16" Text="7 Августа, 2023" FontWeight="Black" Width="153"/>

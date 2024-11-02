@@ -49,8 +49,6 @@ namespace GeoDynamicsApp
             }
 
             button.Content = "Перейти";
-
-            MessageBox.Show("Вы вступили в сообщество!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)

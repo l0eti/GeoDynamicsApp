@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeoDynamicsApp"
         mc:Ignorable="d"
+        Left="100" Top="50"
         Title="Корзина" Height="600" Width="800">
     <Grid Background="White">
         <Grid.RowDefinitions>
@@ -23,7 +24,7 @@
         </Border>
 
         <Border Background="#4388cd" Margin="0,50,0,0" VerticalAlignment="Top" Padding="20">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Medium"><Run Language="ru-ru" Text="Корзина"/></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Medium" Foreground="White"><Run Language="ru-ru" Text="Корзина"/></TextBlock>
         </Border>
 
         <Grid Grid.Row="1" Margin= "30,10,0,0">

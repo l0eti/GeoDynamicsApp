@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeoDynamicsApp"
         mc:Ignorable="d"
+        Left="100" Top="50"
         Title="Маркет" Height="600" Width="800" WindowStyle="ToolWindow" ResizeMode="NoResize">
     <Grid Background="White">
         <Grid.RowDefinitions>

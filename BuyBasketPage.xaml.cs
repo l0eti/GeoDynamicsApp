@@ -37,7 +37,17 @@ namespace GeoDynamicsApp
             if (grid_1Supply.Visibility == Visibility.Hidden)
                 MessageBox.Show("Корзина пуста!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             else
-                MessageBox.Show("Заказ оформлен!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+            {
+                OrderCrdentialsWindow orderCrdentialsWindow = new OrderCrdentialsWindow();
+                var result = orderCrdentialsWindow.ShowDialog();
+
+                if ((bool)!result)
+                {
+                    MessageBox.Show("Оплата отменена!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                MessageBox.Show("Успешно заказано!");
+            }
         }
 
         private void newsB_Click(object sender, RoutedEventArgs e)
